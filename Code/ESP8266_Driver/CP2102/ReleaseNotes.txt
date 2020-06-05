@@ -1,0 +1,162 @@
+CP210x Windows Driver v5.3 Release Notes
+Copyright (C) 2008 Silicon Laboratories, Inc.
+
+This release contains the following components:
+
+* x64 directory
+	* silabser.sys
+	* silabenm.sys
+* x86 directory
+	* silabser.sys
+	* silabenm.sys
+* CP210xVCPInstaller.exe (v2.4)
+* setup.ini
+* silabser.cat
+* slabvcp.inf
+* ReleaseNotes.txt (this file)
+
+
+Driver Installation
+-------------------
+
+	See Kit User's Guide for installation instructions.
+
+
+Release Dates
+-------------
+	CP210x Windows Driver v5.3 - July 15, 2008
+
+
+CP210x Windows Driver Revision History
+--------------------------------------
+
+version 5.3
+	Corrections
+	-----------
+	Corrected the IOCTL_SERIAL_SET_QUEUE_SIZE to allow expansion of the receive buffer.
+	Modified driver to limit the device access only when necessary to improve performance.
+	Corrected a case where read interval timeouts do not get started properly.
+
+version 5.2.2
+	Corrections
+	-----------
+	Fixed a bug that was causing random bluescreens after a device is opened and closed.
+
+version 5.2.1
+	Corrections
+	-----------
+	Fixed a bug caused by the previous fix for incomplete reads in Hyperterminal.
+	Fixed a bug when using the Manufacturing DLL where no data comes back from the part for
+	customization type settings in Vista 64.
+
+
+version 5.2
+	Corrections
+	-----------
+	Fixed a BAD_POOL_HEADER blue screen issue.
+	Fixed a crash during surprise disconnect in HyperTerminal on Vista.
+	Fixed a problem causing various incomplete reads, sometimes visible in HyperTerminal.
+	
+	New features/Enhancements
+	-------------------------
+	CP210xVCPInstaller.exe updated to v2.4.
+	
+	
+version 5.1
+	Corrections
+	-----------
+	Multiple devices can be used now with no problems.
+	Driver now correctly works with the MSCOMM ActiveX control.
+
+
+version 5.0
+	New features/Enhancements
+	-------------------------
+	Driver has been updated to use the KMDF.
+	Driver now includes a Serial Enumeration filter driver.
+	WHQL Certified for XP/2000/2003/Vista(32/64).
+
+
+version 4.40
+	New features/Enhancements
+	-------------------------
+	Driver has been updated to include Vista (x86/x64) support.
+	CP210xVCPInstaller.exe updated to v2.0.
+
+
+version 4.38a
+	New features/Enhancements
+	-------------------------
+	Driver version 4.38 is the same, however the installation procedure changed and a new
+	installation utility has been provided.
+
+	INF files have been changed to be independent of the installer, making reseller submissions
+	easier.
+
+	Windows 2K\XP\2003 now all have the same catalog file making the installation a single
+	utility for all OS's.
+
+
+version 4.38
+	New features/Enhancements
+	-------------------------
+	Extended surprise removal support added to fix COM port hang.
+	WHQL Certified for Windows XP and 2000.
+
+
+Version 4.28a
+	New features/Enhancements
+	-------------------------
+	WHQL Certified for Windows XP and 2000.
+
+
+Version 4.28
+	New features/Enhancements
+	-------------------------
+	Includes Preinstaller executable and with added preinstaller support in uninstaller
+	executable and ini files.
+	
+	Corrections
+	-----------
+	Fixed driver lock condition caused by certain invalid port settings.
+
+	Fixed Windows 98 PreInstaller issue.
+
+
+Version 4.20
+
+	New features/Enhancements
+	-------------------------
+
+	Changed driver binary file names from cyg_* to slab*.  Also changed 
+	default inf file strings to SLAB and Silicon Laboratories.
+
+	This installation includes catalog files for Windows 2000/XP Windows 
+	Hardware Quality Lab (WHQL) Certification.
+
+	
+	Corrections
+        -----------
+
+	Modified behavior of SERIAL_EV_TXEMPTY event notification.  Applications 
+	will no longer miss TXEMPTY events if a	write is pending during the 
+	IOCTL_SERIAL_WAIT_ON_MASK control request.
+
+
+Version 4.16
+
+	New features/Enhancements
+	-------------------------
+	
+	Corrections
+        -----------
+
+	Changed behavior for IOCTL_SERIAL_LSRMST_INSERT for correct modem 
+	event insertion.
+
+
+Version 4.09
+	
+	Initial Release
+
+
